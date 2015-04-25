@@ -58,3 +58,6 @@ target/
 
 #keys file
 *.p12
+
+node_modules/
+token.txt

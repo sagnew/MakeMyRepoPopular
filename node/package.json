@@ -1,0 +1,20 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetch-data.js",
+  "dependencies": {
+    "JSONStream": "^0.10.0",
+    "bluebird": "^2.9.24",
+    "express": "^4.12.3",
+    "mongodb": "^2.0.28",
+    "qs": "^2.4.1",
+    "request": "^2.55.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
