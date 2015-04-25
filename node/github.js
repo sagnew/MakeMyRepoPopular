@@ -7,11 +7,11 @@ function Github (token) {
 }
 
 Github.prototype.getAll = function (since, cb) {
-  var _this = this
   if (typeof since == 'function') {
     cb = since 
     since = 0
   }
+  var _this = this
   var opts = {
     qs: { 
       since: since
@@ -25,4 +25,27 @@ Github.prototype.getAll = function (since, cb) {
   return request(opts, cb)
 }
 
+Github.prototype.getRepo = function (repo, cb) {
+  var _this = this
+  var opts = {
+    headers: { 
+      'Authorization': 'token ' + _this.token,
+      'User-Agent': _this.userAgent
+    },
+    uri: _this.base + '/repos/' + repo
+  } 
+  return request(opts, cb)
+}
+
+Github.prototype.getRepoStat = function (repo, cb) {
+  var _this = this
+  var opts = {
+    headers: { 
+      'Authorization': 'token ' + _this.token,
+      'User-Agent': _this.userAgent
+    },
+    uri: _this.base + '/repos/' + repo + '/stats/contributors'
+  } 
+  return request(opts, cb)
+}
 module.exports = Github
