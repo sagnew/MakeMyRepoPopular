@@ -5,8 +5,7 @@ from db_utils import get_popular_repos
 
 ###############################################################################
 # Generate sample data
-centers = [[1, 1], [-1, -1], [1, -1]]
-X = get_popular_repos()
+X, centers = get_popular_repos()
 
 ###############################################################################
 # Compute clustering with MeanShift
